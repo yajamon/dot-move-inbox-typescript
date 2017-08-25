@@ -9,6 +9,10 @@ describe("Turn", function(){
             const turn = new Turn(1);
             expect(turn.equals(new Turn(1))).to.equal(true);
         });
+        it("is returns false when compared by Turn object whose not same value", function(){
+            const turn = new Turn(1);
+            expect(turn.equals(new Turn(10))).to.equal(false);
+        });
     });
 
     describe("#next()", function(){
