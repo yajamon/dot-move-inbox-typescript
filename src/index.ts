@@ -1,4 +1,5 @@
-import {Game} from "./application/game"
+import { Game } from "./application/game";
+import { ConsoleGameRenderer } from "./presentation/consoleGameRenderer";
 
-var game = new Game();
+const game = new Game(new ConsoleGameRenderer());
 game.start();

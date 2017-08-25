@@ -1,7 +1,9 @@
 import { Turn } from "../domain/turn";
+import { GameRenderer } from "../presentation/gameRenderer";
+
 export class Game {
     turn: Turn;
-    constructor() {
+    constructor(private renderer:GameRenderer) {
     }
 
     start() {
@@ -26,11 +28,7 @@ export class Game {
     }
 
     render(){
-        if (this.isClear()){
-            console.log("finish.");
-            return;
-        }
-        console.log("render turn :"+ this.turn);
+        this.renderer.render(this);
     }
 
     isClear(): boolean{
