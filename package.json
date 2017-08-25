@@ -1,0 +1,8 @@
+{
+  "name": "dot-move-inbox-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yajamon/dot-move-inbox-typescript.git",
+  "author": "yajamon <yajamon.tatsuki@gmail.com>",
+  "license": "MIT"
+}
