@@ -1,1 +1,4 @@
-console.log("hello world");
+import {Game} from "./application/game"
+
+var game = new Game();
+game.start();
