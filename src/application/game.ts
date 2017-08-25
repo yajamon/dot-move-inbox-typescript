@@ -1,5 +1,6 @@
+import { Turn } from "../domain/turn";
 export class Game {
-    turn = 0;
+    turn: Turn;
     constructor() {
     }
 
@@ -17,10 +18,11 @@ export class Game {
     }
 
     initialize(){
+        this.turn = new Turn(0);
     }
 
     update(){
-        this.turn += 1;
+        this.turn = new Turn(this.turn.value + 1);
     }
 
     render(){
@@ -32,6 +34,6 @@ export class Game {
     }
 
     isClear(): boolean{
-        return this.turn > 10;
+        return this.turn.value > 10;
     }
 }
