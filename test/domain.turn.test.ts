@@ -15,7 +15,7 @@ describe("Turn", function(){
         it("is returns a Turn object whose value is one greater than the current value", function(){
             const current = new Turn(0);
             const next = current.next();
-            next.equals(new Turn(1));
+            expect(next.equals(new Turn(1))).to.equal(true);
         });
     });
 });
