@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "target": "es2015"
     },
     "include": [
         "./src/**/*.ts"
