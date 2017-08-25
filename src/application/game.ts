@@ -22,7 +22,7 @@ export class Game {
     }
 
     update(){
-        this.turn = new Turn(this.turn.value + 1);
+        this.turn = this.turn.next();
     }
 
     render(){

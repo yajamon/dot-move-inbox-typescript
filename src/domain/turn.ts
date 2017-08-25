@@ -3,4 +3,8 @@ export class Turn {
     constructor(value: number) {
         this.value = Math.floor(value);
     }
+
+    next():Turn {
+        return new Turn(this.value + 1);
+    }
 }
