@@ -9,6 +9,6 @@ export class Turn {
     }
 
     equals(t: Turn): boolean {
-        return false;
+        return true;
     }
 }
