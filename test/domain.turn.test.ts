@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import { Turn } from "../../src/domain/turn"
+import { Turn } from "../src/domain/turn"
 
 
 describe("Turn", function(){
