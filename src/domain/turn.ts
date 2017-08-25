@@ -7,4 +7,8 @@ export class Turn {
     next():Turn {
         return new Turn(this.value + 1);
     }
+
+    equals(t: Turn): boolean {
+        return false;
+    }
 }
