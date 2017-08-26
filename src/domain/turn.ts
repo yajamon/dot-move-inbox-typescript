@@ -1,14 +1,14 @@
 export class Turn {
-    readonly value:number;
+    public readonly value: number;
     constructor(value: number) {
         this.value = Math.floor(value);
     }
 
-    next():Turn {
+    public next(): Turn {
         return new Turn(this.value + 1);
     }
 
-    equals(t: Turn): boolean {
+    public equals(t: Turn): boolean {
         return t.value === this.value;
     }
 }

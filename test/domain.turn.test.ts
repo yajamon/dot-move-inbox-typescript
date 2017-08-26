@@ -1,10 +1,9 @@
-import { expect } from "chai"
-import { Turn } from "../src/domain/turn"
-
+import { expect } from "chai";
+import { Turn } from "../src/domain/turn";
 
 describe("Turn", function(){
 
-    describe("#equals()", function(){
+    describe("#equals()", function() {
         it("is returns true when compared by Turn object whose same value", function(){
             const turn = new Turn(1);
             expect(turn.equals(new Turn(1))).to.equal(true);
