@@ -2,36 +2,36 @@ import { Turn } from "../domain/turn";
 import { GameRenderer } from "../presentation/gameRenderer";
 
 export class Game {
-    turn: Turn;
-    constructor(private renderer:GameRenderer) {
+    public turn: Turn;
+    constructor(private renderer: GameRenderer) {
     }
 
-    start() {
+    public start() {
         this.initialize();
 
         this.render();
-        let intervalId = setInterval(()=>{
+        const intervalId = setInterval(() => {
             this.update();
-            if(this.isClear()) {
+            if (this.isClear()) {
                 clearInterval(intervalId);
             }
             this.render();
         }, 1000);
     }
 
-    initialize(){
+    public initialize() {
         this.turn = new Turn(0);
     }
 
-    update(){
+    public update() {
         this.turn = this.turn.next();
     }
 
-    render(){
+    public render() {
         this.renderer.render(this);
     }
 
-    isClear(): boolean{
+    public isClear(): boolean {
         return this.turn.value > 10;
     }
 }
