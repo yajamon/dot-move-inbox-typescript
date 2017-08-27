@@ -15,5 +15,16 @@ describe("ConsoleGameRenderer", function() {
             ].join("");
             expect(render.generateWorld(world)).to.equal(expectStage);
         });
+        it("generate width: 8 height: 2", function() {
+            const world = new World(new Size( new Distance(8), new Distance(2) ));
+            const render = new ConsoleGameRenderer();
+            const expectStage = [
+                "__________\n",
+                "|        |\n",
+                "|        |\n",
+                '""""""""""\n',
+            ].join("");
+            expect(render.generateWorld(world)).to.equal(expectStage);
+        });
     });
 });
