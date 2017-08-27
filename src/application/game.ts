@@ -1,8 +1,10 @@
 import { Turn } from "../domain/turn";
+import { World } from "../domain/world";
 import { GameRenderer } from "../presentation/gameRenderer";
 
 export class Game {
     public turn: Turn;
+    public world: World;
     constructor(private renderer: GameRenderer) {
     }
 
