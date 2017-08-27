@@ -1,11 +1,13 @@
 import { Turn } from "../domain/turn";
 import { World } from "../domain/world";
 import { GameRenderer } from "../presentation/gameRenderer";
+import { GameConfig } from "./gameConfig";
 
 export class Game {
     public turn: Turn;
     public world: World;
-    constructor(private renderer: GameRenderer) {
+    private renderer: GameRenderer;
+    constructor(private config: GameConfig) {
     }
 
     public start() {
@@ -22,7 +24,10 @@ export class Game {
     }
 
     public initialize() {
+        const config = this.config;
         this.turn = new Turn(0);
+        this.renderer = config.renderer;
+        this.world = new World(config.worldSize);
     }
 
     public update() {
