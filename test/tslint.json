@@ -7,6 +7,9 @@
     "rules": {
         "only-arrow-functions": [
             false
+        ],
+        "no-unused-expression": [
+            false
         ]
     },
     "rulesDirectory": []
