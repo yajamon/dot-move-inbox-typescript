@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import { Entity } from "../src/domain/entity";
 import { EntityExistence } from "../src/domain/entityExistence";
+import { Point } from "../src/domain/point";
 
 describe("EntityExistence", function(){
 
