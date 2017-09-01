@@ -1,4 +1,4 @@
 export class Vector {
-    constructor(readonly value: number) {
+    constructor(readonly value: number = 0) {
     }
 }
