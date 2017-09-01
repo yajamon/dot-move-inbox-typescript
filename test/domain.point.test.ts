@@ -7,4 +7,8 @@ describe("Point", function(){
         const point = new Point();
         expect(point).to.have.property("x").that.is.instanceof(Vector);
     });
+    it("has property of Vector named y", function(){
+        const point = new Point();
+        expect(point).to.have.property("y").that.is.instanceof(Vector);
+    });
 });
