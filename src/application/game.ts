@@ -1,3 +1,5 @@
+import { Entity } from "../domain/entity";
+import { Point } from "../domain/point";
 import { Turn } from "../domain/turn";
 import { World } from "../domain/world";
 import { GameRenderer } from "../presentation/gameRenderer";
@@ -28,6 +30,10 @@ export class Game {
         this.turn = new Turn(0);
         this.renderer = config.renderer;
         this.world = new World(config.worldSize);
+
+        const x = Math.floor(Math.random() * config.worldSize.width.value);
+        const y = Math.floor(Math.random() * config.worldSize.height.value);
+        this.world.addEntity(new Entity(), Point.make(x, y));
     }
 
     public update() {
