@@ -1,4 +1,5 @@
 import { Game } from "../application/game";
+import { Entity } from "../domain/entity";
 import { World } from "../domain/world";
 import { GameRenderer } from "./gameRenderer";
 
@@ -28,7 +29,10 @@ export class ConsoleGameRenderer implements GameRenderer {
         return lines.join("");
     }
 
-    public generateEntity(entity: Entity) {
+    public generateEntity(entity: Entity | null) {
+        if (entity == null) {
+            return " ";
+        }
         return ".";
     }
 }
