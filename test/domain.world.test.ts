@@ -10,4 +10,10 @@ describe("World", function() {
         const world = new World(size);
         expect(world).to.have.property("size").that.is.instanceof(Size);
     });
+
+    it("has property Array named entityExistence", function() {
+        const size = new Size(new Distance(8), new Distance(3));
+        const world = new World(size);
+        expect(world).to.have.property("entityExistence").that.is.instanceof(Array);
+    });
 });
