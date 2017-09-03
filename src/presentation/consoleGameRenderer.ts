@@ -1,5 +1,6 @@
 import { Game } from "../application/game";
 import { Entity } from "../domain/entity";
+import { EntityExistence } from "../domain/entityExistence";
 import { World } from "../domain/world";
 import { GameRenderer } from "./gameRenderer";
 
@@ -17,9 +18,16 @@ export class ConsoleGameRenderer implements GameRenderer {
     public generateWorld(world: World): string {
         let lines: string[] = [];
         for (let row = 0; row < world.size.height.value; ++row) {
+            const entities = world.entityExistence
+                .filter((e) => e.point.y.value === row)
+                .reduce((prev: Entity[], current) => {
+                    prev[current.point.x.value] = current.entity;
+                    return prev;
+                }, []);
             let line = "";
             for (let col = 0; col < world.size.width.value; ++col) {
-                line += " ";
+                const e = entities[col];
+                line += this.generateEntity(e);
             }
             lines[row] = line;
         }
