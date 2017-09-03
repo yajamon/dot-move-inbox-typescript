@@ -36,5 +36,11 @@ describe("ConsoleGameRenderer", function() {
             const expectEntity = ".";
             expect(render.generateEntity(entity)).to.equal(expectEntity);
         });
+
+        it("generate with null", function() {
+            const render = new ConsoleGameRenderer();
+            const expectEntity = " ";
+            expect(render.generateEntity(null)).to.equal(expectEntity);
+        });
     });
 });
