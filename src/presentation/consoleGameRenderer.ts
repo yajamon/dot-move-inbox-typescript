@@ -27,4 +27,8 @@ export class ConsoleGameRenderer implements GameRenderer {
         lines.push("\"".repeat(world.size.width.value + 2) + "\n");
         return lines.join("");
     }
+
+    public generateEntity(entity: Entity) {
+        return ".";
+    }
 }
