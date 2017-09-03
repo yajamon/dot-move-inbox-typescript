@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import { Distance } from "../src/domain/distance";
+import { Entity } from "../src/domain/entity";
 import { Size } from "../src/domain/size";
 import { World } from "../src/domain/world";
 import { ConsoleGameRenderer } from "../src/presentation/consoleGameRenderer";
@@ -25,6 +26,15 @@ describe("ConsoleGameRenderer", function() {
                 '""""""""""\n',
             ].join("");
             expect(render.generateWorld(world)).to.equal(expectStage);
+        });
+    });
+
+    describe("#generateEntity()", function() {
+        it("generate with Entity", function() {
+            const entity = new Entity();
+            const render = new ConsoleGameRenderer();
+            const expectEntity = ".";
+            expect(render.generateEntity(entity)).to.equal(expectEntity);
         });
     });
 });
