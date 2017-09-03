@@ -8,7 +8,7 @@ export class World {
     constructor(readonly size: Size) {
     }
 
-    public addEntry(entity: Entity, point: Point) {
+    public addEntity(entity: Entity, point: Point) {
         const e = new EntityExistence(entity, point);
         this.entityExistence.push(e);
     }

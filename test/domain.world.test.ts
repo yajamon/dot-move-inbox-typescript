@@ -19,13 +19,13 @@ describe("World", function() {
         expect(world).to.have.property("entityExistence").that.is.instanceof(Array);
     });
 
-    describe("#addEntry()", function() {
+    describe("#addEntity()", function() {
         it("receive Entity and Point", function() {
             const size = new Size(new Distance(8), new Distance(3));
             const world = new World(size);
             const e = new Entity();
             const p = Point.make(1, 1);
-            world.addEntry(e, p);
+            world.addEntity(e, p);
             expect(world.entityExistence[0].entity).to.equal(e);
             expect(world.entityExistence[0].point).to.equal(p);
         });
